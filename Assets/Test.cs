@@ -20,9 +20,10 @@ public class Boss
 
     public void Magic()
     {
-        this.mp -= 5;
+        
         if (mp >= 5)
         {
+            this.mp -= 5;
             Debug.Log("魔法攻撃をした。残りMPは" + mp + "。");
         }
         else
@@ -45,17 +46,20 @@ public class Test : MonoBehaviour
         {
             lastboss.Magic();
         }
-        int[] array = new int[3];
+        lastboss.Magic();
+        int[] array = new int[5];
 
         array[0] = 10;
         array[1] = 30;
         array[2] = 20;
+        array[3] = 50;
+        array[4] = 80;
 
-        for (int i = 0; i < 3; i++) 
+        for (int i = 0; i < 5; i++) 
         {
             Debug.Log (array [i]);
         }
-        for (int i = 2; i >= 0; i--)
+        for (int i = 4; i >= 0; i--)
         {
             Debug.Log (array [i]);
         }
